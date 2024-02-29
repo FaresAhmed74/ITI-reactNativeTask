@@ -1,20 +1,45 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, ScrollView,Text, View,Image, TextInput } from 'react-native';
+import Navigator from './routes/homeStack';
+// import UsersContextProvider from './context/usersContextProvider';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  
+  return (  
+    // <UsersContextProvider>
+
+      <Navigator />
+    // </UsersContextProvider>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    marginTop:50,
+    // flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
+    // alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal:15,
+
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 50,
+  },
+  photoContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+  },
+  photo: {
+    width: 340,
+    height: 500,
+    marginRight: 20,
+    borderRadius: 5,
   },
 });
